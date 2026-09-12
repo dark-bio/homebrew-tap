@@ -1,29 +1,32 @@
+# Release template filled with the version and downloaded artifact digests.
 class ArkCli < Formula
   desc "Command line interface to Ark enclaves"
   homepage "https://dark.bio"
-  version "0.1.0"
+  version "0.1.1"
   license "BSD-3-Clause"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/dark-bio/cli/releases/download/v#{version}/ark-#{version}-macos-arm64", using: :nounzip
-    sha256 "7c9ca89a8abc080980b47f803204b492331c38e73bce4554df1fbacc6dde73d8"
+    url "https://github.com/dark-bio/cli/releases/download/v0.1.1/ark-0.1.1-macos-arm64", using: :nounzip
+    sha256 "f6c305638a527d0c4a3bffe00ce034e6e91a5e64ed361281391bc1251bf5ffcb"
   end
 
   on_intel do
-    url "https://github.com/dark-bio/cli/releases/download/v#{version}/ark-#{version}-macos-amd64", using: :nounzip
-    sha256 "79eb7b2e37b64fc19d1e750ee6ee8bb5852079a9e990c1361b9157dc5929b076"
+    url "https://github.com/dark-bio/cli/releases/download/v0.1.1/ark-0.1.1-macos-amd64", using: :nounzip
+    sha256 "6de55c6abbfb801cf38ca0a4c57358fcf5741658824df8e59610041ba6111fd6"
   end
 
   resource "licenses" do
-    url "https://github.com/dark-bio/cli/releases/download/v0.1.0/LICENSES.txt", using: :nounzip
-    sha256 "459a23afe4b6c56e8b841985608b003737126cbfa6deae22a6aad3e41b0153db"
+    url "https://github.com/dark-bio/cli/releases/download/v0.1.1/LICENSES.txt", using: :nounzip
+    sha256 "129c2633b72b4ff48ddf8d0ab572bbaa3c1ece4bdf8f5418b17f810579927a21"
   end
 
+  # Keep the command name stable and retain dependency notices beside the package.
   def install
     bin.install Dir["ark-#{version}-macos-*"].fetch(0) => "ark"
     chmod 0755, bin/"ark"
+    generate_completions_from_executable(bin/"ark", "completions")
     resource("licenses").stage { pkgshare.install "LICENSES.txt" }
   end
 
