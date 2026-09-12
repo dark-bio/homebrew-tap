@@ -1,4 +1,4 @@
-# Dark Bio Homebrew Tap
+# Dark Bio - Homebrew Tap
 
 [Homebrew](https://brew.sh/) formulae and casks for macOS, maintained by
 [Dark Bio](https://dark.bio).
