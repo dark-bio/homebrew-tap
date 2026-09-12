@@ -12,7 +12,7 @@
 
 ## Installation
 
-With the following commands, you can install the latest version of each product:
+With the following commands, you can install the latest version of each tool:
 
 ```sh
 # Formulae
