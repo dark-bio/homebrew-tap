@@ -2,25 +2,25 @@
 class ArkCliDev < Formula
   desc "Command line interface to Ark enclaves"
   homepage "https://dark.bio"
-  version "0.3.5-dev.32"
+  version "0.3.6-dev.34"
   license "BSD-3-Clause"
 
   depends_on :macos
   conflicts_with "ark-cli", because: "both install the ark command"
 
   on_arm do
-    url "https://github.com/dark-bio/cli/releases/download/v0.3.5-dev.32/ark-0.3.5-dev.32-macos-arm64", using: :nounzip
-    sha256 "876d083378bf36bdc3c56f1be8dc8309a5f4f7a734533fcefa2e83b860fe6200"
+    url "https://github.com/dark-bio/cli/releases/download/v0.3.6-dev.34/ark-0.3.6-dev.34-macos-arm64", using: :nounzip
+    sha256 "973873574e834f1a9b9caefd9ec2c808f66b1b1ad7494c02c79c706c32a8b605"
   end
 
   on_intel do
-    url "https://github.com/dark-bio/cli/releases/download/v0.3.5-dev.32/ark-0.3.5-dev.32-macos-amd64", using: :nounzip
-    sha256 "46e7387cb8d5429f51c48657962f1e82598ebd3e35cd1494d0c4dc70adf4ad7a"
+    url "https://github.com/dark-bio/cli/releases/download/v0.3.6-dev.34/ark-0.3.6-dev.34-macos-amd64", using: :nounzip
+    sha256 "711e12062ab3922e683930723d90caf74b6247808b891030dcd84f6eddeb9fb2"
   end
 
   resource "licenses" do
-    url "https://github.com/dark-bio/cli/releases/download/v0.3.5-dev.32/LICENSES.txt", using: :nounzip
-    sha256 "b1d2683530d4073509837524302cd158641ba725a1941165a259b970d0f6e227"
+    url "https://github.com/dark-bio/cli/releases/download/v0.3.6-dev.34/LICENSES.txt", using: :nounzip
+    sha256 "c116df85099070cd63a7f7386e7d0b2d9bd95a12f44f8b12e8580156ad0098cc"
   end
 
   # Keep the command name stable and retain dependency notices beside the package.
