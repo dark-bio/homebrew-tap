@@ -2,9 +2,9 @@
 cask "ark-emulator" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.3.0"
-  sha256 arm:   "62bfeb4ea8984f05f7657edb64ce4424c716c46f69199d2f72273fd061752be7",
-         intel: "8d10de0d88e48de9e15b2e872e761393f22446124bd1433533ca912efdee6982"
+  version "0.4.0"
+  sha256 arm:   "e9f450ea1693ef2850f0975d2bdb76c67ef0a11581b6df93fb0dd92ec6ec8ca6",
+         intel: "14f265beb7538b0c7179681b36f7de4c6781609ac3f3efeab765bd32084c0083"
 
   url "https://github.com/dark-bio/emulator/releases/download/v#{version}/ark-emulator-#{version}-macos-#{arch}.dmg"
   name "Ark Emulator"
